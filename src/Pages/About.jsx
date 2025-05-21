@@ -1,7 +1,7 @@
-import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect, memo, useMemo } from "react";
+import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Memoized Components
 const Header = memo(() => (
@@ -21,7 +21,7 @@ const Header = memo(() => (
       data-aos-duration="800"
     >
       <Sparkles className="w-5 h-5 text-purple-400" />
-      Transforming ideas into digital experiences
+      I bring ideas to life with code & design.
       <Sparkles className="w-5 h-5 text-purple-400" />
     </p>
   </div>
@@ -114,19 +114,13 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 
 const AboutPage = () => {
   // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
+  const { totalProjects, totalCertificates } = useMemo(() => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
     
-    const startDate = new Date("2021-11-06");
-    const today = new Date();
-    const experience = today.getFullYear() - startDate.getFullYear() -
-      (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
-
     return {
       totalProjects: storedProjects.length,
       totalCertificates: storedCertificates.length,
-      YearExperience: experience
     };
   }, []);
 
@@ -159,7 +153,7 @@ const AboutPage = () => {
     {
       icon: Code,
       color: "from-[#6366f1] to-[#a855f7]",
-      value: totalProjects,
+      value: "10",
       label: "Total Projects",
       description: "Innovative web solutions crafted",
       animation: "fade-right",
@@ -167,20 +161,32 @@ const AboutPage = () => {
     {
       icon: Award,
       color: "from-[#a855f7] to-[#6366f1]",
-      value: totalCertificates,
+      value: "9",
       label: "Certificates",
       description: "Professional skills validated",
       animation: "fade-up",
     },
     {
-      icon: Globe,
+      icon: UserCheck,
       color: "from-[#6366f1] to-[#a855f7]",
-      value: YearExperience,
-      label: "Years of Experience",
-      description: "Continuous learning journey",
+      value: "3", // Example value for qualifications
+      label: "Qualifications",
+      description: "Academic and professional achievements",
       animation: "fade-left",
     },
-  ], [totalProjects, totalCertificates, YearExperience]);
+  ], [totalProjects, totalCertificates]);
+
+  // Smooth scroll function
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <div
@@ -193,7 +199,7 @@ const AboutPage = () => {
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-6 text-center lg:text-left">
             <h2 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
@@ -201,11 +207,11 @@ const AboutPage = () => {
                 Hello, I'm
               </span>
               <span 
-                className="block mt-2 text-gray-200"
+                className="block mt-2 text-gray-200 whitespace-nowrap"
                 data-aos="fade-right"
                 data-aos-duration="1300"
               >
-                Eki Zulfar Rachman
+                Shaikh Mohammed Sahil
               </span>
             </h2>
             
@@ -214,30 +220,28 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang
-              tertarik dalam pengembangan Front-End. Saya berfokus pada
-              menciptakan pengalaman digital yang menarik dan selalu berusaha
-              memberikan solusi terbaik dalam setiap proyek.
+            I’m a Computer Science Engineering graduate with a 7.8 CGPA, passionate about Frontend Development, UI/UX Design, and Web Development. I enjoy creating visually appealing, responsive, and user-friendly applications by combining clean design principles with efficient code. My expertise lies in React, Tailwind CSS, Material UI, and Figma, where I focus on delivering seamless user experiences. My other interests include Cybersecurity, Data Science, Embedded Systems with IoT, Power BI, and Talend. I’ve also come across technologies like Flask, Node.js, and MongoDB during my learning journey and am interested in gaining hands-on experience with them in the future. I have experience participating in hackathons, where I collaborate on innovative solutions under tight deadlines. Additionally, I’ve studied and gained foundational knowledge in Data Science and Cybersecurity through coursework and workshops.
+
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/drive/folders/1BOm51Grsabb3zj6Xk27K-iRwI1zITcpo" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="800"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
-              >
-                <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
-              </button>
+              <a href="https://drive.google.com/file/d/18IDXkwFPtjrbPeHBVwAbTTOtl1A-yXQG/view?usp=sharing" className="w-full lg:w-auto">
+                <button 
+                  data-aos="fade-up" 
+                  data-aos-duration="800"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                >
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+                </button>
               </a>
-              <a href="#Portofolio" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
-              >
-                <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
-              </button>
+              <a href="#Portfolio" className="w-full lg:w-auto" onClick={(e) => scrollToSection(e, "Portfolio")}>
+                <button 
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 animate-bounce-slow delay-200"
+                >
+                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+                </button>
               </a>
             </div>
           </div>
@@ -245,7 +249,7 @@ const AboutPage = () => {
           <ProfileImage />
         </div>
 
-        <a href="#Portofolio">
+        <a href="#Portfolio" onClick={(e) => scrollToSection(e, "Portfolio")}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
             {statsData.map((stat) => (
               <StatCard key={stat.label} {...stat} />

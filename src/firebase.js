@@ -1,21 +1,20 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
-import { collection, addDoc, getDocs } from "@firebase/firestore"; // Perbarui ini
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "@firebase/firestore";
 
-
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration (updated)
 const firebaseConfig = {
-  apiKey: "AIzaSyB-lfUt1adpQ0KYcFFW_oAWTJVfHDOOZy8",
-  authDomain: "portofolio-web-3e8e8.firebaseapp.com",
-  databaseURL: "https://portofolio-web-3e8e8-default-rtdb.firebaseio.com",
-  projectId: "portofolio-web-3e8e8",
-  storageBucket: "portofolio-web-3e8e8.firebasestorage.app",
-  messagingSenderId: "25195509306",
-  appId: "1:25195509306:web:2b635dcf997137bf612703"
- };
+  apiKey: "AIzaSyDBm85bboT1jw4fxT1AmosPhfpx1Bo2MjQ",
+  authDomain: "portfoliofp-756f5.firebaseapp.com",
+  projectId: "portfoliofp-756f5",
+  storageBucket: "portfoliofp-756f5.firebasestorage.app",
+  messagingSenderId: "952919357480",
+  appId: "1:952919357480:web:b02e843cf3666d90bb1d1d",
+  measurementId: "G-8BEC89JQR5" // Optional: only needed if you're using Firebase Analytics
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { db, collection, addDoc };
+export { db, collection, addDoc, getDocs };

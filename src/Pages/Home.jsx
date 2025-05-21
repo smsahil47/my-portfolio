@@ -45,8 +45,8 @@ const TechStack = memo(({ tech }) => (
   </div>
 ));
 
-const CTAButton = memo(({ href, text, icon: Icon }) => (
-  <a href={href}>
+const CTAButton = memo(({ href, text, icon: Icon, onClick }) => (
+  <a href={href} onClick={onClick}>
     <button className="group relative w-[160px]">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#4f52c9] to-[#8644c5] rounded-xl opacity-50 blur-md group-hover:opacity-90 transition-all duration-700"></div>
       <div className="relative h-11 bg-[#030014] backdrop-blur-xl rounded-lg border border-white/10 leading-none overflow-hidden">
@@ -77,12 +77,12 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
+const WORDS = ["UI/UX Designer", "Tech Enthusiast"];
 const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/EkiZR" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ekizr/" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id" }
+  { icon: Github, link: "https://github.com/smsahil47" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/shaikh-mohammed-sahil0047/" },
+  { icon: Instagram, link: "https://www.instagram.com/sm.archives_/?hl=id" }
 ];
 
 const Home = () => {
@@ -99,7 +99,6 @@ const Home = () => {
       AOS.init({
         once: true,
         offset: 10,
-       
       });
     };
 
@@ -140,6 +139,18 @@ const Home = () => {
     );
     return () => clearTimeout(timeout);
   }, [handleTyping]);
+
+  // Smooth scroll function
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: "smooth"
+      });
+    }
+  };
 
   // Lottie configuration
   const lottieOptions = {
@@ -183,7 +194,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                  A Frontend Developer & UI/UX Designer passionate about creating smooth, interactive, and user-friendly web experiences. I love blending aesthetics with functionality to craft seamless digital solutions.
                 </p>
 
                 {/* Tech Stack */}
@@ -195,8 +206,18 @@ const Home = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
-                  <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
-                  <CTAButton href="#Contact" text="Contact" icon={Mail} />
+                  <CTAButton 
+                    href="#Portfolio" 
+                    text="Projects" 
+                    icon={ExternalLink} 
+                    onClick={(e) => scrollToSection(e, "Portfolio")}
+                  />
+                  <CTAButton 
+                    href="#Contact" 
+                    text="Contact" 
+                    icon={Mail} 
+                    onClick={(e) => scrollToSection(e, "Contact")}
+                  />
                 </div>
 
                 {/* Social Links */}
