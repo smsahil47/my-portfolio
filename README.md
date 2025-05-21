@@ -22,7 +22,6 @@ On this occasion, I’d like to share **my portfolio website project**, which sh
 
 ## 🌐 Website Link
 
-[Click here to view the portfolio website] 
 www.smsahil.site 
 
 ---
