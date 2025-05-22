@@ -25,6 +25,10 @@ Click below to view the portfolio:
 
 www.smsahil.site 
 
+If the domain site is not accessible then you can view my portfolio on vercel through the below link:
+
+🔗https://lnkd.in/e_CB6PbG
+
 ---
 
 ## 🙏 Credits
