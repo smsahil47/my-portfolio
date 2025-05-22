@@ -27,7 +27,7 @@ www.smsahil.site
 
 If the domain site is not accessible then you can view my portfolio on vercel through the below link:
 
-🔗(https://my-portfolio-rho-ecru-56.vercel.app/)
+🔗https://my-portfolio-rho-ecru-56.vercel.app/
 
 ---
 
