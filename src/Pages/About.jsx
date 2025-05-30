@@ -161,7 +161,7 @@ const AboutPage = () => {
     {
       icon: Award,
       color: "from-[#a855f7] to-[#6366f1]",
-      value: "9",
+      value: "21",
       label: "Certificates",
       description: "Professional skills validated",
       animation: "fade-up",
@@ -220,12 +220,12 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            I’m a Computer Science Engineering graduate with a 7.8 CGPA, passionate about Frontend Development, UI/UX Design, and Web Development. I enjoy creating visually appealing, responsive, and user-friendly applications by combining clean design principles with efficient code. My expertise lies in React, Tailwind CSS, Material UI, and Figma, where I focus on delivering seamless user experiences. My other interests include Cybersecurity, Data Science, Embedded Systems with IoT, Power BI, and Talend. I’ve also come across technologies like Flask, Node.js, and MongoDB during my learning journey and am interested in gaining hands-on experience with them in the future. I have experience participating in hackathons, where I collaborate on innovative solutions under tight deadlines. Additionally, I’ve studied and gained foundational knowledge in Data Science and Cybersecurity through coursework and workshops.
+            I’m a Computer Science Engineering graduate with a 7.86 CGPA, passionate about Frontend Development, UI/UX Design, and Web Development. I enjoy creating visually appealing, responsive, and user-friendly applications by combining clean design principles with efficient code. My expertise lies in React, Tailwind CSS, Material UI, and Figma, where I focus on delivering seamless user experiences. My other interests include Cybersecurity, Data Science, Embedded Systems with IoT, Power BI, and Talend. I’ve also come across technologies like Flask, Node.js, and MongoDB during my learning journey and am interested in gaining hands-on experience with them in the future. I have experience participating in hackathons, where I collaborate on innovative solutions under tight deadlines. Additionally, I’ve studied and gained foundational knowledge in Data Science and Cybersecurity through coursework and workshops.
 
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="https://drive.google.com/file/d/18IDXkwFPtjrbPeHBVwAbTTOtl1A-yXQG/view?usp=sharing" className="w-full lg:w-auto">
+              <a href="https://drive.google.com/file/d/1fQzhkEBdtvqQ1V8P0bLJKrI3PRBxZ5Jw/view?usp=sharing" className="w-full lg:w-auto">
                 <button 
                   data-aos="fade-up" 
                   data-aos-duration="800"

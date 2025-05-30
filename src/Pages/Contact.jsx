@@ -17,7 +17,7 @@ const SocialLinks = () => {
       
       <div className="w-full flex flex-col space-y-4">
         <a 
-          href="https://www.linkedin.com/in/shaikh-mohammed-sahil0047/"
+          href="https://www.linkedin.com/in/smsahil47"
           target="_blank" 
           rel="noopener noreferrer"
           className="w-full flex items-center p-4 bg-white/10 rounded-xl transition-all duration-300 hover:bg-white/15 border border-white/20 hover:border-[#6366f1]/30"

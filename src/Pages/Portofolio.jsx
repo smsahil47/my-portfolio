@@ -127,33 +127,64 @@ const certificateData = [
   { id: 7, Img: "/certificate7.png" },
   { id: 8, Img: "/certificate8.png" },
   { id: 9, Img: "/certificate9.png" },
+  { id: 10, Img: "/certificate10.png" },
+  { id: 11, Img: "/certificate11.png" },
+  { id: 12, Img: "/certificate12.png" },
+  { id: 13, Img: "/certificate13.png" },
+  { id: 14, Img: "/certificate14.png" },
+  { id: 15, Img: "/certificate15.png" },
+  { id: 16, Img: "/certificate16.png" },
+  { id: 17, Img: "/certificate17.png" },
+  { id: 18, Img: "/certificate18.png" },
+  { id: 19, Img: "/certificate19.png" },
+  { id: 20, Img: "/certificate20.png" },
+  { id: 21, Img: "/certificate21.png" },
 ];
 
 const TimelineEducation = () => {
   const [activeInternship, setActiveInternship] = useState(0);
-  const [autoSlide] = useState(true); // Removed setAutoSlide since we're not using controls
+  const [autoSlide] = useState(true);
 
   const educationData = [
     {
       type: "internship",
       internships: [
         {
-          title: "Zephyr Technologies Pvt Ltd, Mangalore",
-          role: "Data Science Intern",
-          duration: "26 Oct 2023 - 23 Nov 2023",
-          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
-        },
-        {
-          title: "Prodigy Infotech",
-          role: "Cybersecurity Intern(Online)",
-          duration: "01 Sept 2024 - 30 Sept 2024",
-          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+          title: "Edubyheart India Pvt Ltd, Bangalore",
+          role: "Cyber security & Ethical Hacking Intern",
+          duration: "27 Jan 2025 - 10 May 2025",
+          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400">
+  <path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"></path>
+  <path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"></path>
+  <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path>
+  <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path>
+  <path d="M8.65 22c.21-.66.45-1.32.57-2"></path>
+  <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path>
+  <path d="M2 16h.01"></path>
+  <path d="M21.8 16c.2-2 .131-5.354 0-6"></path>
+  <path d="M9 6.8a6 6 0 0 1 9 5.2"></path>
+</svg>
         },
         {
           title: "National Skill Development Corporation",
           role: "Data Engineer Intern",
           duration: "Oct 2024 - Dec 2024",
           icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path d="M3.27 6.96 12 12.01l8.73-5.05" /><path d="M12 22.08V12" /></svg>
+        },
+        {
+          title: "Prodigy Infotech",
+          role: "Cybersecurity Intern (Online)",
+          duration: "01 Sept 2024 - 30 Sept 2024",
+          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400">
+  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+  <path d="M9 12l2 2 4-4"></path>
+</svg>
+        },
+        {
+          title: "Zephyr Technologies Pvt Ltd, Mangalore",
+          role: "Data Science Intern",
+          duration: "26 Oct 2023 - 23 Nov 2023",
+          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
         }
       ]
     },

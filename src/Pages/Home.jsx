@@ -81,7 +81,7 @@ const WORDS = ["UI/UX Designer", "Tech Enthusiast"];
 const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/smsahil47" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/shaikh-mohammed-sahil0047/" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/smsahil47/" },
   { icon: Instagram, link: "https://www.instagram.com/sm.archives_/?hl=id" }
 ];
 
