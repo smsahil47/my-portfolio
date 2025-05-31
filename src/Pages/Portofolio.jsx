@@ -166,9 +166,9 @@ const TimelineEducation = () => {
 </svg>
         },
         {
-          title: "National Skill Development Corporation",
+          title: "National Skill Development Corporation (NSDC)",
           role: "Data Engineer Intern",
-          duration: "Oct 2024 - Dec 2024",
+          duration: "17 Sept 2024 - 15 Dec 2024",
           icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><path d="M3.27 6.96 12 12.01l8.73-5.05" /><path d="M12 22.08V12" /></svg>
         },
         {
@@ -192,7 +192,7 @@ const TimelineEducation = () => {
       year: "July 2025",
       title: "Bachelor of Engineering in Computer Science",
       institution: "Yenepoya Institute of Technology, Moodbidri, Mangalore",
-      description: "CGPA: 7.8",
+      description: "CGPA: 7.86",
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
     },
     {
